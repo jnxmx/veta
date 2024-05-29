@@ -17,7 +17,7 @@ function setup() {
 function draw() {
   background(255);
   imageMode(CENTER);
-  translate(width / 2, height / 2);
+  translate(windowWidth*0.5, windowHeight *0.5);
 
   if (usingSensor) {
     rotateX(radians(rotationY));
