@@ -28,7 +28,7 @@ function draw() {
 
   image(front, 0, 0);
   translate(0, 0, 1);
-  rotateY(PI);
+  scale(-1,1);
   image(back, 0, 0);
 }
 
