@@ -17,7 +17,6 @@ function setup() {
 function draw() {
   background(0);
   imageMode(CENTER);
-  translate(windowWidth*0.25, windowHeight *0.25);
 
   if (usingSensor) {
     rotateX(radians(rotationY));
@@ -38,6 +37,6 @@ let rotationX = 0;
 let rotationY = 0;
 
 function handleOrientation(event) {
-  rotationX +=event.alpha;
-  rotationY += event.beta;
+  rotationX += 0.01*event.alpha;
+  rotationY += 0.01*event.beta;
 }
