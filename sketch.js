@@ -48,8 +48,8 @@ function touchStarted() {
 function touchMoved() {
   const dx = touches[0].x - touchStartX;
   const dy = touches[0].y - touchStartY;
-  touchRotationX = map(dx, 0, width/3, 0, 360);
-  touchRotationY = map(dy, 0, height/3, 0, 360);
+  touchRotationX += map(dx, 0, width, 0, 360);
+  touchRotationY += map(dy, 0, height, 0, 360);
   touchStartX = touches[0].x;
   touchStartY = touches[0].y;
   return false; // Prevent default touch behavior
